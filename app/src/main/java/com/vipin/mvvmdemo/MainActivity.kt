@@ -25,7 +25,8 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
 
         mDestinationLiveModel = ViewModelProviders.of(this).get(DestinationLiveModel::class.java)
         mDestinationLiveModel.initialize()
-        mDestinationLiveModel.getAllDestination().observe(this, Observer {
+        mDestinationLiveModel.getAllDestination()
+            .observe(this, Observer {
             mRecyclerAdapter.notifyDataSetChanged()
         })
 

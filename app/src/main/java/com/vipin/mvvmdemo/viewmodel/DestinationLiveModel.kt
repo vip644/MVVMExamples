@@ -11,8 +11,8 @@ import com.vipin.mvvmdemo.repository.DestinationCityRepository
  */
 class DestinationLiveModel: ViewModel() {
 
-    lateinit var mDestinationList : MutableLiveData<List<Destination>>
-    lateinit var mDestinationCityRepository: DestinationCityRepository
+    private lateinit var mDestinationList : MutableLiveData<List<Destination>>
+    private lateinit var mDestinationCityRepository: DestinationCityRepository
 
     fun initialize(){
         mDestinationCityRepository = DestinationCityRepository.getInstance()!!
